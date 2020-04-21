@@ -11,7 +11,7 @@ class Surat extends CI_Controller
         $_SESSION['halaman_terakhir'] = "surat";
 
         $this->load->model("user_model");
-        if($this->user_model->isNotLogin()) redirect(site_url('user/login'));
+        
         
         $this->load->model("surat_model");
         
@@ -20,6 +20,8 @@ class Surat extends CI_Controller
 
     public function index()
     {
+        if($this->user_model->isNotLogin()) redirect(site_url('user/login'));
+        
         if (isset($_POST['btn_submit'])) {
 			$data['nomor_transaksi'] = $this->input->post('cari');
 			$this->session->set_userdata('sess_nomor_transaksi', $data['nomor_transaksi']);
@@ -86,6 +88,8 @@ class Surat extends CI_Controller
 
     public function add($id=null)
     { 
+        if($this->user_model->isNotLogin()) redirect(site_url('user/login'));
+        
         $surat = $this->surat_model;
         $validation = $this->form_validation;
         $validation->set_rules($surat->rules());
@@ -120,6 +124,8 @@ class Surat extends CI_Controller
     
     public function edit($id = null)
     {
+        if($this->user_model->isNotLogin()) redirect(site_url('user/login'));
+        
         if (!isset($id)) redirect('surat');
        
         $surat = $this->surat_model;
@@ -139,6 +145,8 @@ class Surat extends CI_Controller
 
     public function delete($id=null)
     {
+        if($this->user_model->isNotLogin()) redirect(site_url('user/login'));
+        
         if (!isset($id)) show_404();
         
         if ($this->surat_model->delete($id)) {
