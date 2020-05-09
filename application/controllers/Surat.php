@@ -121,6 +121,16 @@ class Surat extends CI_Controller
         $this->load->view("v_surat_input", $data);
     }
 
+    public function hapusphoto($id, $nomor){
+        if($this->user_model->isNotLogin()) redirect(site_url('user/login'));
+        
+        if (!isset($id)) redirect('surat');
+       
+        $this->surat_model->hapusphoto($id, $nomor);
+        $data["surat"]        = $this->surat_model->getById($id);
+        $this->load->view("v_surat_input", $data);
+        
+    }
     
     public function edit($id = null)
     {

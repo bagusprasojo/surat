@@ -66,9 +66,13 @@
 										<td>
 											<?php echo $surat->username ?>
 										</td>
-										<td width="150">
+										<td width="250">
 											<a href="<?php echo site_url('surat/edit/'.$surat->surat_id) ?> "
 											class="btn btn-primary"> Edit</a>
+											
+											<a href="<?php echo site_url('surat/lihat/'.$surat->surat_id) ?> "
+											class="btn btn-primary"> Lihat</a>
+											
 											<a onclick="deleteConfirm('<?php echo site_url('surat/delete/'.$surat->surat_id) ?>')"
 												href="#!" class="btn btn-danger">Hapus</a>
 											

@@ -50,6 +50,69 @@
 					</div>				
 
 					<div class="form-group">
+						<label for="name">Photo 1</label><br>
+						<input type="hidden" name="hphoto_1" value="<?php echo $surat->photo1?>" />
+						<?php if ($surat->photo1 != "no_images.png") {?>
+							<img width="100" height="100" src="<?php echo base_url("photo/surat/") . $surat->photo1 ?>"/></br>
+							<a href="<?php echo site_url('surat/hapusphoto/'.$surat->surat_id . "/1") ?> "
+											class="btn btn-primary"> Hapus Photo 1</a>
+						<?php } else {?>
+							<input class="form-control-file" type="file" name="photo1"/>
+						<?php }?>
+						
+					</div>
+
+					<div class="form-group">
+						<label for="name">Photo 2</label><br>
+						<input type="hidden" name="hphoto_2" value="<?php echo $surat->photo2?>" />
+						<?php if ($surat->photo2 != "no_images.png") {?>
+							<img width="100" height="100" src="<?php echo base_url("photo/surat/") . $surat->photo2 ?>"/></br>
+							<a href="<?php echo site_url('surat/hapusphoto/'.$surat->surat_id . "/2") ?> "
+											class="btn btn-primary"> Hapus Photo 2</a>
+						<?php } else {?>
+							<input class="form-control-file" type="file" name="photo2"/>
+						<?php }?>
+						
+					</div>
+
+					<div class="form-group">
+						<label for="name">Photo 3</label><br>
+						<input type="hidden" name="hphoto_3" value="<?php echo $surat->photo3?>" />
+						<?php if ($surat->photo3 != "no_images.png") {?>
+							<img width="100" height="100" src="<?php echo base_url("photo/surat/") . $surat->photo3 ?>"/></br>
+							<a href="<?php echo site_url('surat/hapusphoto/'.$surat->surat_id . "/3") ?> "
+											class="btn btn-primary"> Hapus Photo 3</a>
+						<?php } else {?>
+							<input class="form-control-file" type="file" name="photo3"/>
+						<?php }?>
+						
+					</div>
+
+					<div class="form-group">
+						<label for="name">Photo 4</label><br>
+						<input type="hidden" name="hphoto_4" value="<?php echo $surat->photo4?>" />
+						<?php if ($surat->photo4 != "no_images.png") {?>
+							<img width="100" height="100" src="<?php echo base_url("photo/surat/") . $surat->photo4 ?>"/></br>
+							<a href="<?php echo site_url('surat/hapusphoto/'.$surat->surat_id . "/4") ?> "
+											class="btn btn-primary"> Hapus Photo 4</a>
+						<?php } else {?>
+							<input class="form-control-file" type="file" name="photo4"/>
+						<?php }?>
+						
+					<div class="form-group">
+						<label for="name">Photo 5</label><br>
+						<input type="hidden" name="hphoto_5" value="<?php echo $surat->photo5?>" />
+						<?php if ($surat->photo5 != "no_images.png") {?>
+							<img width="100" height="100" src="<?php echo base_url("photo/surat/") . $surat->photo5 ?>"/></br>
+							<a href="<?php echo site_url('surat/hapusphoto/'.$surat->surat_id . "/5") ?> "
+											class="btn btn-primary"> Hapus Photo 5</a>
+						<?php } else {?>
+							<input class="form-control-file" type="file" name="photo5"/>
+						<?php }?>
+						
+					</div>
+					
+					<div class="form-group">
 						<label for="name">Keterangan*</label>
 						<textarea rows="5" class="form-control <?php echo form_error('keterangan') ? 'is-invalid':'' ?>"
 							name="keterangan" placeholder="Keterangan surat ..."><?php echo $surat->keterangan ?></textarea>

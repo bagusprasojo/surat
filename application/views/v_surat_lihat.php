@@ -36,6 +36,28 @@
                                     <tr><td>Keterangan</td><td><?php echo $surat->keterangan?></td></tr>
                                 </tbody>
 							</table>
+
+              <table class="table table-sm table-bordered" id="dataTable" width="100%" cellspacing="0">
+								<thead>
+									<tr>
+										<th width="180">File 1</th>
+										<th width="180">File 2</th>
+										<th width="180">File 3</th>
+										<th width="180">File 4</th>
+										<th width="180">File 5</th>										
+									</tr>
+								</thead>
+								<tbody>
+                  <tr>
+                    
+                    <td><a href="<?php echo base_url("photo/surat/") . $surat->photo1 ?>"><img  class="img-thumbnail" src="<?php echo base_url("photo/surat/") . $surat->photo1 ?>"></a></td>
+                    <td><a href="<?php echo base_url("photo/surat/") . $surat->photo2 ?>"><img  class="img-thumbnail" src="<?php echo base_url("photo/surat/") . $surat->photo2 ?>"></a></td>
+                    <td><a href="<?php echo base_url("photo/surat/") . $surat->photo3 ?>"><img  class="img-thumbnail" src="<?php echo base_url("photo/surat/") . $surat->photo3 ?>"></a></td>
+                    <td><a href="<?php echo base_url("photo/surat/") . $surat->photo4 ?>"><img  class="img-thumbnail" src="<?php echo base_url("photo/surat/") . $surat->photo4 ?>"></a></td>
+                    <td><a href="<?php echo base_url("photo/surat/") . $surat->photo5 ?>"><img  class="img-thumbnail" src="<?php echo base_url("photo/surat/") . $surat->photo5 ?>"></a></td>                    
+                  </tr>                    
+                </tbody>
+							</table>
 							
 							
 						</div>
